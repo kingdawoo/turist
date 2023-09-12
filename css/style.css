@@ -1,0 +1,186 @@
+/* Master */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500&family=Lato:wght@300;400&family=Raleway&display=swap');
+
+@font-face {
+    font-family: neurial;
+    src: url('../fonts/NeurialGroteskFontFamily/NeurialGrotesk-Bold.otf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 4fr 1.5fr 1.5fr 1.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav-item"
+      "main-item"
+      "history-item"
+      "gallery-item"
+      "booking-item"
+      "contact-item";
+    height: 3000px;
+    width: auto;
+}
+
+p>a:hover {
+    text-decoration: underline;
+}
+  
+/* Navigation */
+
+.nav-item { 
+    grid-area: nav-item;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-item>img, span {
+    position: relative;
+    right: 100px;
+}
+
+.nav-item>a {
+    text-decoration: none;
+    color: darkblue;
+    font-size: larger;
+    padding: 20px 50px;
+    border-bottom: 4px solid white;
+} 
+
+.nav-item>a:hover {
+    border-bottom: 4px solid blue;
+}
+  
+/* Main */
+
+.main-item { 
+    grid-area: main-item; 
+    background-image: url('../img/statue.webp');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.main-item>h1 {
+    font-size: 100px;
+    white-space: break-spaces;
+    color: red;
+    font-family: "neurial";
+    padding: 30vh 10vh;
+}
+  
+/* Historia */
+
+.history-item { 
+    grid-area: history-item; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 0.5px solid lightblue;
+}
+
+.history-item>img {
+    height: 50vh;
+    border-radius: 20px;
+}
+
+.history-text>p {
+    text-align: justify;
+    width: 40vw;
+    align-self: flex-end;
+}
+
+.history-text>h2, p>a {
+    font-family: 'neurial';
+    text-decoration: none;
+    color: red;
+}
+  
+/* Galleria */
+
+.gallery-item { 
+    grid-area: gallery-item; 
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    left: 0;
+    background-color: rgb(229, 229, 229);
+}
+
+.gallery-item>img {
+    border-radius: 20px;
+    height: 30vh;
+    align-self: center;
+}
+
+.gallery-item>p {
+    flex: 1 0 100%;
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    align-self: center;
+    font-family: 'neurial';
+}
+
+.gallery-item>a {
+    flex: 1 0 100%;
+    text-decoration: none;
+    color: darkblue;
+    font-size: 25px;
+    text-align: center;
+}
+
+.gallery-item>a:hover {
+    color: red;
+}
+
+/* Bokning */
+
+.booking-item { 
+    grid-area: booking-item;
+    background-image: url('../img/trip.jpeg');
+    background-size: 100vw;
+    background-position: 50%;
+}
+
+.booking-text>p {
+    color: white;
+    padding: 15px;
+}
+  
+/* Kontakt */
+
+.contact-item { 
+    grid-area: contact-item; 
+    background-color: black;
+}
+
+.contact-text {
+    text-align: center;
+    position: relative;
+    top: 25%;
+}
+
+.contact-text>p {
+    color: white;
+}
